@@ -29,7 +29,7 @@ TEST_OBJ := $(OBJ_TEST)/unit_test_case.o $(OBJ_TEST)/Gtest_main.o
 GTEST_OBJ := $(OBJ_TEST)/gtest-all.o
 
 # lib files
-GTEST_LIB := $(LIB)/libgtest.a
+GTEST_LIB := $(LIB_TEST)/libgtest.a
 
 # executables
 TEST_EXE := avg_test
@@ -63,4 +63,6 @@ $(OBJ)/%.o: $(SRC)/%.c
 clean:
 	rm $(OBJ)/*.o ||:
 	rm $(OBJ_TEST)/*.o ||:
+	rm $(LIB)/*.a ||:
+	rm $(LIB_TEST)/*.a ||:
 	rm $(ALL_EXE) ||:
